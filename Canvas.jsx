@@ -82,7 +82,7 @@ function App() {
   return (
         <div>
             <div width="400" border="1">
-                <canvas style={{cursor: 'crosshair', border: '1px solid black'}} width="400" height="300" ref={canvasElement} onMouseDown={(event)=>{down(event)}} onTouchStart={(event)=>{down(event)}} onMouseMove={(event)=>{move(event)}} onTouchMove={(event)=>{move(event)}} onMouseUp={(event)=>{up(event)}} onTouchEnd={(event)=>{up(event)}}></canvas>
+                <canvas style={{cursor: 'crosshair', border: '1px solid black', overscrollBehavior: 'contain' }} width="400" height="300" ref={canvasElement} onMouseDown={(event)=>{down(event)}} onTouchStart={(event)=>{down(event)}} onMouseMove={(event)=>{move(event)}} onTouchMove={(event)=>{move(event)}} onMouseUp={(event)=>{up(event)}} onTouchEnd={(event)=>{up(event)}}></canvas>
                 <div width="400">
                     <input type="color" value={color} onChange={(event)=>{setColor(event.target.value)}} />
                     <div style={{cursor: 'pointer'}} onClick={()=>{getPng()}}>Save to console</div>
